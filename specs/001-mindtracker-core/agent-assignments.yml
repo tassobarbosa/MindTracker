@@ -1,0 +1,254 @@
+# Agent Assignments
+# Feature: mindtracker-core
+# Generated: 2026-05-25
+# Command: /speckit.agent-assign.assign
+
+agents_scanned:
+  - name: "DevOps Automator"
+    source: "user"
+    description: "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipeline development, and cloud operations"
+  - name: "Backend Architect"
+    source: "user"
+    description: "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infrastructure"
+  - name: "Frontend Developer"
+    source: "user"
+    description: "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and performance optimization"
+  - name: "Data Engineer"
+    source: "user"
+    description: "Expert data engineer specializing in building reliable data pipelines and scalable data infrastructure"
+  - name: "Rapid Prototyper"
+    source: "user"
+    description: "Specialized in ultra-fast proof-of-concept development and MVP creation"
+
+assignments:
+  T001:
+    agent: "DevOps Automator"
+    reason: "Project scaffolding and tooling setup"
+  T002:
+    agent: "DevOps Automator"
+    reason: "Dependency management / package setup"
+  T003:
+    agent: "DevOps Automator"
+    reason: "Dev tooling installation"
+  T004:
+    agent: "DevOps Automator"
+    reason: "CSS toolchain configuration"
+  T005:
+    agent: "DevOps Automator"
+    reason: "UI toolchain bootstrap and config"
+  T006:
+    agent: "DevOps Automator"
+    reason: "Build tool configuration (PWA, aliases)"
+  T007:
+    agent: "DevOps Automator"
+    reason: "TypeScript compiler config"
+  T008:
+    agent: "DevOps Automator"
+    reason: "Test runner configuration"
+  T009:
+    agent: "DevOps Automator"
+    reason: "Linter toolchain setup"
+  T010:
+    agent: "DevOps Automator"
+    reason: "Test environment bootstrap"
+  T011:
+    agent: "DevOps Automator"
+    reason: "Project structure scaffolding"
+  T012:
+    agent: "DevOps Automator"
+    reason: "Build/dev scripts configuration"
+  T013:
+    agent: "Backend Architect"
+    reason: "Core domain type definitions from data model"
+  T014:
+    agent: "Backend Architect"
+    reason: "Core domain interface definitions"
+  T015:
+    agent: "Frontend Developer"
+    reason: "Zod validation schema for form layer"
+  T016:
+    agent: "Frontend Developer"
+    reason: "Frontend date utility functions"
+  T017:
+    agent: "Backend Architect"
+    reason: "Dexie database class and singleton"
+  T018:
+    agent: "Backend Architect"
+    reason: "Typed database query functions"
+  T019:
+    agent: "Frontend Developer"
+    reason: "Zustand state slice for entry form"
+  T020:
+    agent: "Frontend Developer"
+    reason: "Zustand state slice for filters"
+  T021:
+    agent: "Frontend Developer"
+    reason: "Design system tokens (colors, spacing)"
+  T022:
+    agent: "Frontend Developer"
+    reason: "Tailwind directives + token imports"
+  T023:
+    agent: "Frontend Developer"
+    reason: "UI component library setup"
+  T024:
+    agent: "Frontend Developer"
+    reason: "Form validation unit tests"
+  T025:
+    agent: "Frontend Developer"
+    reason: "Date utility unit tests"
+  T026:
+    agent: "Backend Architect"
+    reason: "DB query tests with fake-indexeddb"
+  T027:
+    agent: "Frontend Developer"
+    reason: "Zustand store unit tests"
+  T028:
+    agent: "Frontend Developer"
+    reason: "Zustand store unit tests"
+  T029:
+    agent: "Frontend Developer"
+    reason: "Segmented button UI component"
+  T030:
+    agent: "Frontend Developer"
+    reason: "Segmented button UI component"
+  T031:
+    agent: "Frontend Developer"
+    reason: "Controlled textarea component"
+  T032:
+    agent: "Frontend Developer"
+    reason: "Date navigation UI component"
+  T033:
+    agent: "Frontend Developer"
+    reason: "Root form with RHF + Zod integration"
+  T034:
+    agent: "Frontend Developer"
+    reason: "Data-fetching custom hook"
+  T035:
+    agent: "Frontend Developer"
+    reason: "Page component with route integration"
+  T036:
+    agent: "Frontend Developer"
+    reason: "Navigation component with ARIA"
+  T037:
+    agent: "Frontend Developer"
+    reason: "Layout wrapper component"
+  T038:
+    agent: "Frontend Developer"
+    reason: "Router setup and route definitions"
+  T039:
+    agent: "Frontend Developer"
+    reason: "Component unit tests"
+  T040:
+    agent: "Frontend Developer"
+    reason: "Component unit tests"
+  T041:
+    agent: "Frontend Developer"
+    reason: "Component unit tests"
+  T042:
+    agent: "Frontend Developer"
+    reason: "Complex form integration tests"
+  T043:
+    agent: "Frontend Developer"
+    reason: "Navigation + ARIA unit tests"
+  T044:
+    agent: "Frontend Developer"
+    reason: "Add Popover/date-picker to navigator"
+  T045:
+    agent: "Frontend Developer"
+    reason: "Conditional 'Editing date' UI label"
+  T046:
+    agent: "Frontend Developer"
+    reason: "Extended DateNavigator tests"
+  T047:
+    agent: "Frontend Developer"
+    reason: "Integration test with fake-indexeddb"
+  T048:
+    agent: "Frontend Developer"
+    reason: "Data-fetching hook for timeline"
+  T049:
+    agent: "Frontend Developer"
+    reason: "Timeline card component"
+  T050:
+    agent: "Frontend Developer"
+    reason: "Filter toggle component"
+  T051:
+    agent: "Frontend Developer"
+    reason: "Filtered list with empty-state handling"
+  T052:
+    agent: "Frontend Developer"
+    reason: "Timeline page component"
+  T053:
+    agent: "Frontend Developer"
+    reason: "Component unit tests"
+  T054:
+    agent: "Frontend Developer"
+    reason: "Filter state unit tests"
+  T055:
+    agent: "Frontend Developer"
+    reason: "List + empty-state unit tests"
+  T056:
+    agent: "Data Engineer"
+    reason: "Pure data transformation functions for charts"
+  T057:
+    agent: "Frontend Developer"
+    reason: "Range-scoped data-fetching hook"
+  T058:
+    agent: "Frontend Developer"
+    reason: "Analytics date range UI"
+  T059:
+    agent: "Frontend Developer"
+    reason: "Insufficient data UI card"
+  T060:
+    agent: "Frontend Developer"
+    reason: "Recharts bar chart component"
+  T061:
+    agent: "Frontend Developer"
+    reason: "Recharts grouped bar chart component"
+  T062:
+    agent: "Frontend Developer"
+    reason: "Analytics page with conditional charts"
+  T063:
+    agent: "Data Engineer"
+    reason: "Pure function tests for data transforms"
+  T064:
+    agent: "Frontend Developer"
+    reason: "Component unit tests"
+  T065:
+    agent: "Frontend Developer"
+    reason: "Component + store integration tests"
+  T066:
+    agent: "Frontend Developer"
+    reason: "Chart render tests"
+  T067:
+    agent: "Frontend Developer"
+    reason: "Chart render tests"
+  T068:
+    agent: "DevOps Automator"
+    reason: "PWA manifest and Workbox config"
+  T069:
+    agent: "DevOps Automator"
+    reason: "PWA assets"
+  T070:
+    agent: "Frontend Developer"
+    reason: "ARIA, keyboard nav, colour contrast"
+  T071:
+    agent: "Frontend Developer"
+    reason: "TypeScript strict error resolution"
+  T072:
+    agent: "Frontend Developer"
+    reason: "Linter error resolution"
+  T073:
+    agent: "Frontend Developer"
+    reason: "Coverage gap remediation"
+  T074:
+    agent: "DevOps Automator"
+    reason: "Production build verification"
+  T075:
+    agent: "Frontend Developer"
+    reason: "Mobile UX and touch target verification"
+  T076:
+    agent: "DevOps Automator"
+    reason: "Service worker / offline verification"
+  T077:
+    agent: "default"
+    reason: "Documentation update, no specialized agent needed"

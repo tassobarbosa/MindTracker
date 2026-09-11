@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# MindTracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A minimalist, private log for spotting correlations between symptoms, routines, and environment — not a journal, not therapy.
 
-Currently, two official plugins are available:
+MindTracker is a single-user, local-first web app for daily biological/cognitive self-tracking. Log a headache level, work environment, and a short note in under 30 seconds, then use the timeline and analytics views to see how they relate over weeks and months.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Why This Exists
 
-## React Compiler
+Pattern recognition across daily habits and symptoms is hard to do from memory. MindTracker removes the friction from logging — no accounts, no server, no clutter — so the only thing left to do is notice what's actually going on.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Daily entry** — record headache intensity, work environment, and notes for any date in seconds.
+- **Timeline** — browse past entries in reverse-chronological order, filterable by headache level or environment.
+- **Analytics** — charts for headache frequency over time and headache level breakdown by work environment.
+- **Local-first** — all data stays on your device (IndexedDB via Dexie); nothing is sent to a server.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) on [Vite](https://vite.dev/)
+- [Dexie](https://dexie.org/) (IndexedDB) for local persistence
+- [Zustand](https://github.com/pmndrs/zustand) for state management
+- [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) for form handling and validation
+- [Tailwind CSS](https://tailwindcss.com/) + [Radix UI](https://www.radix-ui.com/) for styling and accessible primitives
+- [Recharts](https://recharts.org/) for analytics charts
+- [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/) for testing
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Prerequisites**: Node.js 18+ and [pnpm](https://pnpm.io/).
+
+```bash
+pnpm install
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app runs at `http://localhost:5173` by default. All data is stored locally in your browser — nothing to configure.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Available Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | Description |
+|---|---|
+| `pnpm dev` | Start the development server with hot reload |
+| `pnpm build` | Type-check and build for production |
+| `pnpm preview` | Preview the production build locally |
+| `pnpm test` | Run tests in watch mode |
+| `pnpm test:run` | Run the test suite once (CI mode) |
+| `pnpm lint` | Lint the codebase |
+| `pnpm typecheck` | Type-check without emitting output |
+
+## Project Structure
+
 ```
+src/
+├── components/   # UI building blocks (entry, timeline, analytics, layout)
+├── pages/        # Route-level views (Entry, Timeline, Analytics)
+├── db/           # Dexie database schema and queries
+├── stores/       # Zustand state stores
+├── lib/          # Schemas, date utilities, chart data helpers
+├── hooks/        # Data-fetching hooks
+└── types/        # Shared enums and models
+```
+
+For the full product specification and design decisions, see [specs/001-mindtracker-core/spec.md](specs/001-mindtracker-core/spec.md).
+
+## Contributing
+
+This is a personal project without a formal contribution process at this time.
+
+## License
+
+No license specified yet.
